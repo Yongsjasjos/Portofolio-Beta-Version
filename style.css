@@ -1,0 +1,367 @@
+/* Reset dan Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Animasi Loading */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a1f44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.progress-container {
+    width: 80%;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background-color: #ffcc00;
+    transition: width 0.1s ease;
+}
+
+#loading-percentage {
+    font-size: 1.2em;
+}
+
+/* Warna Dasar */
+body {
+    background-color: #0a1f44;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #0c3b7e;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+/* Link Navigasi */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.container {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Tentang Saya */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 6px;
+    animation: slide-in 0.8s ease-out;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #ffcc00;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+}
+
+/* Keahlian */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    animation: fade-in 1s ease-in-out;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-icon {
+    color: #ffcc00;
+    font-size: 3em;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2);
+}
+
+.skill-container {
+    flex: 0 0 45%;
+    margin-bottom: 20px;
+}
+
+.skill-container i {
+    font-size: 4em;
+    text-align: center;
+}
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0a1f44;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Row untuk Nama dan Email */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffcc00;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0a1f44;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #ffcc00;
+    color: #0a1f44;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e6b800;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0c3b7e;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+/* Animasi Fade-In dan Slide-In */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive untuk Perangkat Seluler */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+    }
+
+    .menu-toggle span {
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        transition: 0.3s ease;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: #ffcc00;
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: #ffcc00;
+    }
+
+    #navbar.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #0c3b7e;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        top: 60px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .skills-container {
+        flex-direction: row;
+        gap: 30px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .skill-container {
+        flex: 0 0 48%; /* Adjust two items per row */
+    }
+
+    .skill-icon {
+        font-size: 3em;
+    }
+    .contact-form {
+        padding: 15px;
+    }
+
+    /* Pada layar kecil, nama dan email ditampilkan dalam satu kolom */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 16px;
+    }
+}
+   
+}
+
+    footer {
+        font-size: 0.8em;
+    }
+}
